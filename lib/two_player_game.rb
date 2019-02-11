@@ -50,8 +50,8 @@ class TwoPlayerGame
       self.winner   = "draw"
     elsif vertical_count(color, row, column) == 4 ||
           horizontal_count(color, row) == 4 ||
-          up_diagonal_count(color, row, column) == 4 ||
-          down_diagonal_count(color, row, column) == 4
+          up_diagonal_count(color, row, column) >= 4 ||
+          down_diagonal_count(color, row, column) >= 4
       self.finished = true
       self.winner   = color
     end
